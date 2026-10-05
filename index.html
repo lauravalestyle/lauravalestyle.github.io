@@ -12,8 +12,62 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+
+<style>
+.top-socials{
+  width:min(520px,92%);
+  margin:0 auto;
+  padding:14px 0 4px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.top-social-side{display:flex;gap:10px;align-items:center}
+.top-socials a{
+  width:34px;height:34px;
+  display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+  color:inherit;
+  text-decoration:none;
+  font-size:16px;
+  line-height:1;
+  transition:transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.top-socials a:hover{transform:translateY(-1px);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3)}
+@media(max-width:480px){
+  .top-socials{width:94%;padding-top:10px}
+  .top-socials a{width:32px;height:32px}
+}
+
+.closer-mini-note{
+  max-width: 520px;
+  margin: 14px auto 0;
+  font-size: .82rem;
+  line-height: 1.5;
+  opacity: .72;
+}
+</style>
+
 </head>
 <body>
+
+<nav class="top-socials" aria-label="Laura Vale social media">
+  <div class="top-social-side">
+    <a href="https://www.threads.com/@lauravale.style" target="_blank" rel="noopener noreferrer"
+       aria-label="Threads" data-track="top_threads_click" data-category="Social" data-action="click" data-name="Top Threads">◎</a>
+    <a href="https://www.instagram.com/lauravale.style" target="_blank" rel="noopener noreferrer"
+       aria-label="Instagram" data-track="top_instagram_click" data-category="Social" data-action="click" data-name="Top Instagram">◎</a>
+  </div>
+  <div class="top-social-side">
+    <a href="https://www.tiktok.com/@lauravale.style" target="_blank" rel="noopener noreferrer"
+       aria-label="TikTok" data-track="top_tiktok_click" data-category="Social" data-action="click" data-name="Top TikTok">♪</a>
+    <a href="https://x.com/lauravalestyle" target="_blank" rel="noopener noreferrer"
+       aria-label="X" data-track="top_x_click" data-category="Social" data-action="click" data-name="Top X">𝕏</a>
+  </div>
+</nav>
+
 <div class="grain" aria-hidden="true"></div><main>
 <section class="hero"><img class="hero-img" src="assets/golden-hero.jpg" alt="Laura Vale at golden hour" fetchpriority="high"><div class="hero-overlay"></div><div class="hero-content"><div class="eyebrow">LAURA VALE <span>✦</span></div><h1>Style. Travel.<br><em>A little trouble.</em></h1><p class="hero-line">You’ve only seen the safe version. 😉</p><a class="cta cta-main" data-track="datify_hero" data-category="Monetization" data-action="click" data-name="Datify Hero CTA" href="https://lavelove.com/6FgX73Wb?aid=hbkkpapzzb&kid=hxpkxzkkagb&sub1=threads_organic" target="_blank" rel="noopener noreferrer"><span class="button-icon">💋</span> Don’t just look… come closer.</a><p class="tiny-note">18+ • dating link</p></div><div class="scroll-cue">SCROLL <span>↓</span></div></section>
 <section class="intro section-pad"><p class="kicker">A little more than the feed</p><h2>Some moments belong<br><em>somewhere else.</em></h2><p class="intro-copy">Outfits, escapes, slow mornings and a side of Laura you won't find in every post. 😉</p></section>
@@ -25,27 +79,33 @@
 <section class="closer section-pad">
   <p class="kicker">A little closer</p>
   <h2>Come closer. <em>💋</em></h2>
-  <p class="closer-lead">You found your way here… so why not stay for a little longer?</p>
+  <p class="closer-lead">You made it this far… want to talk a little closer? 😉</p>
 
   <a class="cta cta-main closer-cta"
-     data-track="come_closer_cta"
+     data-track="come_closer_cta" data-ga4-event="come_closer_click"
+     data-button-name="Come say hi here" data-destination="datify"
+     data-placement="come_closer_section"
      data-category="Monetization"
      data-action="click"
      data-name="Come Closer CTA"
      href="https://lavelove.com/6FgX73Wb?aid=hbkkpapzzb&kid=hxpkxzkkagb&sub1=threads_organic"
      target="_blank" rel="noopener noreferrer">
-    <span class="button-icon">💋</span> Come talk to me there
+    <span class="button-icon">💋</span> Come say hi here
   </a>
 
+  <p class="closer-mini-note">
+    A quick sign-up and ad step may be required before you can continue. 🤍
+  </p>
+
   <div class="monetization-note">
-    <h3>One little thing before you join…</h3>
+    <h3>How it works</h3>
     <p>
       The partner site may ask you to complete a short sign-up and an ad step before you can continue.
-      That’s intentional: the advertising is part of how this page is monetized and helps support Laura’s content.
+      The advertising helps support and monetize Laura’s content.
     </p>
     <p>
-      So if you’re happy to continue, please finish the sign-up and the required ad step rather than closing the page halfway through.
-      I appreciate it. 🤍
+      If you choose to continue, simply complete the required steps and you’ll be able to move forward.
+      Thank you for supporting the page. 🤍
     </p>
     <p class="tiny-note">18+ • Please continue only if you meet the age requirement of the partner site.</p>
   </div>
@@ -64,3 +124,4 @@
 (function(){function cleanText(e){return e.textContent.trim().replace(/\s+/g,' ').substring(0,150)}document.querySelectorAll('[data-track]').forEach(function(el){el.addEventListener('click',function(){var t=el.dataset.track||'unknown',c=el.dataset.category||'Button',a=el.dataset.action||'click',n=el.dataset.name||t,x=cleanText(el);if(typeof gtag==='function')gtag('event','button_click',{button_name:t,button_category:c,button_action:a,button_label:n,button_text:x,page_location:window.location.href});if(window._paq)_paq.push(['trackEvent',c,a,n])})});var th=[25,50,75,90],done={};function sd(){var st=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,dh=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight),vh=window.innerHeight,sh=dh-vh;if(sh<=0)return;var p=st/sh*100;th.forEach(function(q){if(p>=q&&!done[q]){done[q]=true;if(typeof gtag==='function')gtag('event','scroll_depth',{percent_scrolled:q,page_location:window.location.href});if(window._paq)_paq.push(['trackEvent','Engagement','Scroll',q+'%'])}})}var to;window.addEventListener('scroll',function(){if(to)return;to=setTimeout(function(){sd();to=null},150)},{passive:true});if(typeof gtag==='function')gtag('event','landing_page_view',{page_location:window.location.href,page_title:document.title});if(window._paq)_paq.push(['trackEvent','Page','Landing',document.title]);})();
 </script>
 </body></html>
+  
